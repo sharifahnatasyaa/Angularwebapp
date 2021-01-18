@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ 
+<form (ngSubmit)="onSubmit()">
+
+     <div style="margin: 80px;">
+    <input type="text" name="restaurantName" >
+    <input type="text" name="City"> </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+  <div class="container">
+  
+  <form novalidate
+      [formGroup]="myform"
+      (ngSubmit)="onSubmit()">
+
+  <fieldset formGroupName="name">
+    <div class="form-group"
+         [ngClass]="{
+        'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
+        'has-success': firstName.valid && (firstName.dirty || firstName.touched)
+      }">
+      
+<table style="width:100%">
+ <tr>
+   <th>Restaurant name</th>
+   <th>City</th>
+   
+ </tr>
+ <tr>
+ </tr>
+ <tr>
+   <td>KFC</td>
+   <td>Selangor</td>
+  
+ </tr>
+ <tr>
+   <td>Mcd</td>
+   <td>Perak</td>
+ 
+ </tr>
+ <tr>
+   <td>PizzaHut</td>
+   <td>Penang</td>
+   
+ </tr>
+</table>
+    
+    </div>
+  </fieldset>
+<html>
+
